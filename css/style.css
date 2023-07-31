@@ -2,3 +2,7 @@
     display: flex;
     justify-content: center;
 }
+
+.elementskit-info-box-icon img{
+    filter: hue-rotate(45deg)
+}
