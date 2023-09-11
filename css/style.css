@@ -6,3 +6,9 @@
 .elementskit-info-box-icon img{
     filter: hue-rotate(45deg)
 }
+
+.elementor-element.elementor-element-4a8f933.elementor-widget.elementor-widget-ekit-nav-menu,
+section.elementor-section.elementor-top-section.elementor-element.elementor-element-1e011f4.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-row{
+    display: flex;
+    justify-content: center;
+}
