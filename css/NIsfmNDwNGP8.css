@@ -1,4 +1,4 @@
-.wpcf7 .screen-reader-response {
+. .screen-reader-response {
 	position: absolute;
 	overflow: hidden;
 	clip: rect(1px, 1px, 1px, 1px);
@@ -11,49 +11,49 @@
 	word-wrap: normal !important;
 }
 
-.wpcf7 form .wpcf7-response-output {
+. form .-response-output {
 	margin: 2em 0.5em 1em;
 	padding: 0.2em 1em;
 	border: 2px solid #00a0d2; /* Blue */
 }
 
-.wpcf7 form.init .wpcf7-response-output,
-.wpcf7 form.resetting .wpcf7-response-output,
-.wpcf7 form.submitting .wpcf7-response-output {
+. form.init .-response-output,
+. form.resetting .-response-output,
+. form.submitting .-response-output {
 	display: none;
 }
 
-.wpcf7 form.sent .wpcf7-response-output {
+. form.sent .-response-output {
 	border-color: #46b450; /* Green */
 }
 
-.wpcf7 form.failed .wpcf7-response-output,
-.wpcf7 form.aborted .wpcf7-response-output {
+. form.failed .-response-output,
+. form.aborted .-response-output {
 	border-color: #dc3232; /* Red */
 }
 
-.wpcf7 form.spam .wpcf7-response-output {
+. form.spam .-response-output {
 	border-color: #f56e28; /* Orange */
 }
 
-.wpcf7 form.invalid .wpcf7-response-output,
-.wpcf7 form.unaccepted .wpcf7-response-output,
-.wpcf7 form.payment-required .wpcf7-response-output {
+. form.invalid .-response-output,
+. form.unaccepted .-response-output,
+. form.payment-required .-response-output {
 	border-color: #ffb900; /* Yellow */
 }
 
-.wpcf7-form-control-wrap {
+.-form-control-wrap {
 	position: relative;
 }
 
-.wpcf7-not-valid-tip {
+.-not-valid-tip {
 	color: #dc3232; /* Red */
 	font-size: 1em;
 	font-weight: normal;
 	display: block;
 }
 
-.use-floating-validation-tip .wpcf7-not-valid-tip {
+.use-floating-validation-tip .-not-valid-tip {
 	position: relative;
 	top: -2ex;
 	left: 1em;
@@ -64,17 +64,17 @@
 	width: 24em;
 }
 
-.wpcf7-list-item {
+.-list-item {
 	display: inline-block;
 	margin: 0 0 0 1em;
 }
 
-.wpcf7-list-item-label::before,
-.wpcf7-list-item-label::after {
+.-list-item-label::before,
+.-list-item-label::after {
 	content: " ";
 }
 
-.wpcf7-spinner {
+.-spinner {
 	visibility: hidden;
 	display: inline-block;
 	background-color: #23282d; /* Dark Gray 800 */
@@ -88,11 +88,11 @@
 	position: relative;
 }
 
-form.submitting .wpcf7-spinner {
+form.submitting .-spinner {
 	visibility: visible;
 }
 
-.wpcf7-spinner::before {
+.-spinner::before {
 	content: '';
 	position: absolute;
 	background-color: #fbfbfc; /* Light Gray 100 */
@@ -110,7 +110,7 @@ form.submitting .wpcf7-spinner {
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.wpcf7-spinner::before {
+	.-spinner::before {
 		animation-name: blink;
 		animation-duration: 2000ms;
 	}
@@ -140,29 +140,29 @@ form.submitting .wpcf7-spinner {
 	}
 }
 
-.wpcf7 input[type="file"] {
+. input[type="file"] {
 	cursor: pointer;
 }
 
-.wpcf7 input[type="file"]:disabled {
+. input[type="file"]:disabled {
 	cursor: default;
 }
 
-.wpcf7 .wpcf7-submit:disabled {
+. .-submit:disabled {
 	cursor: not-allowed;
 }
 
-.wpcf7 input[type="url"],
-.wpcf7 input[type="email"],
-.wpcf7 input[type="tel"] {
+. input[type="url"],
+. input[type="email"],
+. input[type="tel"] {
 	direction: ltr;
 }
 
-.wpcf7-reflection > output {
+.-reflection > output {
 	display: list-item;
 	list-style: none;
 }
 
-.wpcf7-reflection > output[hidden] {
+.-reflection > output[hidden] {
 	display: none;
 }
