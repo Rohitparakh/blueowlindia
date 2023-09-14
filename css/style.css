@@ -12,3 +12,48 @@ section.elementor-section.elementor-top-section.elementor-element.elementor-elem
     display: flex;
     justify-content: center;
 }
+
+.elementor-1161 .elementor-element.elementor-element-ac4bda4,
+.elementor-1161 .elementor-element.elementor-element-b26c289{
+background-color: #01449E;
+}
+
+.color-white{
+    color: white !important;
+}
+.primary-btn-color-white{
+    color: white !important;
+}
+
+.color-white:hover{
+    text-decoration: underline;
+}
+
+.primary-btn{
+    font-family: var(--e-global-typography-e909243-font-family ), Sans-serif;
+    font-weight: 700;
+    letter-spacing: 4px;
+    word-spacing: var(--e-global-typography-e909243-word-spacing );
+    padding: 13px 183px 13px 183px;
+    color: var(--e-global-color-6aba3dc );
+    background-color: var(--e-global-color-primary );
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: var(--e-global-color-primary );
+    text-transform: uppercase;
+}
+
+.primary-btn:hover{
+    font-family: var(--e-global-typography-e909243-font-family ), Sans-serif !Important;
+    font-weight: 700 !Important;
+    letter-spacing: 4px !Important;
+    word-spacing: var(--e-global-typography-e909243-word-spacing ) !Important;
+    padding: 13px 183px 13px 183px !Important;
+    color: var(--e-global-color-6aba3dc ) !Important;
+    background-color: var(--e-global-color-primary ) !Important;
+    border-style: solid !Important;
+    border-width: 2px 2px 2px 2px !Important;
+    border-color: var(--e-global-color-primary ) !Important;
+    text-transform: uppercase !Important;
+
+}

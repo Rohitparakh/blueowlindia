@@ -711,6 +711,10 @@
 																class="elementskit-border-divider elementskit-style-long">
 															</div>
 														</div>
+														<a class="primary-btn primary-btn-color-white"
+																					href="#contact"
+																					>
+																					Get Started </a>
 													</div>
 												</div>
 											</div>
@@ -1277,7 +1281,7 @@
 																					<div class="box-body">
 																						<h4
 																							class="elementskit-info-box-title">
-																							Personal Marketing</h4>
+																							Personal Branding</h4>
 																						<p>The Strategy revolves around
 																							developing and promoting an
 																							individual's professional
@@ -3615,6 +3619,15 @@
 																				id="contact_name"
 																				name="your-name"></span> </label>
 																</p>
+																<p><label> Your Company (optional) <br>
+																		<span class="-form-control-wrap"
+																			><input size="40"
+																				class=""
+																				aria-required="true"
+																				aria-invalid="false" value type="text"
+																				id="contact_company"
+																				name="your-company"></span> </label>
+																</p>
 																<p><label> Your Email<br>
 																		<span class="-form-control-wrap"
 																			><input size="40"
@@ -3624,7 +3637,16 @@
 																				id="contact_email"
 																				name="your-email"></span> </label>
 																</p>
-																<p><label> Your Message (optional)<br>
+																<p><label> Your Phone Number<br>
+																		<span class="-form-control-wrap"
+																			><input size="40"
+																				class="-form-control -text -email -validates-as-required -validates-as-email"
+																				aria-required="true"
+																				aria-invalid="false" value type="number"
+																				id="contact_number"
+																				name="your-number"></span> </label>
+																</p>
+																<p><label> Your Requirement (optional)<br>
 																		<span class="-form-control-wrap"
 																			><textarea cols="40"
 																				rows="10"
@@ -3808,13 +3830,13 @@
 															</a>
 														</li> -->
 														<li class="elementor-icon-list-item elementor-inline-item">
-															<a href="#about">
+															<a href="#about" class="color-white">
 
 																<span class="elementor-icon-list-text">About Us</span>
 															</a>
 														</li>
 														<li class="elementor-icon-list-item elementor-inline-item">
-															<a href="#services">
+															<a href="#services"class="color-white">
 
 																<span class="elementor-icon-list-text">Services</span>
 															</a>
@@ -3832,7 +3854,7 @@
 															</a>
 														</li> -->
 														<li class="elementor-icon-list-item elementor-inline-item">
-															<a href="#contact">
+															<a href="#contact"class="color-white">
 
 																<span class="elementor-icon-list-text">Contact Us</span>
 															</a>
@@ -4160,16 +4182,56 @@
 			emailjs.init("xWxs1Z0BagRAwBWfB");
 		})();
 
+		function ValidateEmail(input) {
 
+var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+if (input.match(validRegex)) {
+
+//   alert("Valid email address!");
+
+//   document.form1.text1.focus();
+
+  return true;
+
+} else {
+
+//   alert("Invalid email address!");
+
+//   document.form1.text1.focus();
+
+  return false;
+
+}
+
+}
 		function mailSender(event) {
 			event.preventDefault();
 			let fullName = document.getElementById("contact_name").value;
 			let userEmail = document.getElementById("contact_email").value;
+			let userPhone = document.getElementById("contact_number").value;
 			let userMessage = document.getElementById("contact_message").value;
+			let userCompany = document.getElementById("contact_company").value;
+			let validEmail=userEmail.length>0?ValidateEmail(userEmail):false;
 
+			if(fullName.length<=0){
+				alert("Please enter your name");
+				return;
+			}
+			if(!validEmail){
+				alert("Please enter valid email address");
+				return;
+			}
+			if(userPhone.length<=8){
+				alert("Please enter your phone number");
+				return;
+			}
+			
 			var contactParams = {
 				from_name: fullName,
 				from_email: userEmail,
+				from_number: userPhone,
+				from_company: userCompany,
 				message: userMessage
 			};
 			
@@ -4177,6 +4239,8 @@
 				alert("Contact form submission successful");
 				document.getElementById("contact_name").value=""
 				document.getElementById("contact_email").value=""
+				document.getElementById("contact_number").value=""
+				document.getElementById("contact_company").value=""
 				document.getElementById("contact_message").value=""
 			            }, function(error) {
 			                alert("Contact form submission failed")
